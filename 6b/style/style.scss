@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital@1&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #eed797;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    // height: 100vh;
+    width: 100vw;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.box {
+    background: steelblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 6px;
+    transform: translateX(200%);
+    transition: transform 0.4s ease;
+    h2{
+        color: #fff;
+        font-size: 40px;
+    }
+}
+
+.box:nth-last-of-type(even) {
+    transform: translateX(-200%);
+}
+
+.box.show {
+    transform: translateX(0);
+}
